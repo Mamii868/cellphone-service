@@ -5,6 +5,24 @@ public class CellPhoneApplication {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        CellPhone cellPhone1 = promptCellphoneInput();
+        CellPhone cellPhone2 = promptCellphoneInput();
+
+        display(cellPhone1);
+        System.out.println("\n");
+        display(cellPhone2);
+
+        cellPhone1.dial(cellPhone2.getPhoneNumber());
+        System.out.println("\n");
+        cellPhone2.dial(cellPhone1.getPhoneNumber());
+    }
+
+    public static String userStringInput(String message) {
+        System.out.print(message);
+        return scanner.nextLine();
+    }
+
+    public static CellPhone promptCellphoneInput() {
         System.out.print("What is the serial number? ");
         int serialNumber = scanner.nextInt();
         scanner.nextLine();
@@ -13,15 +31,7 @@ public class CellPhoneApplication {
         String phoneNumber = userStringInput("What is the phone number? ");
         String owner = userStringInput("Who is the owner of the phone? ");
 
-       CellPhone cellPhone1 = populateCellPhoneData(serialNumber, model, carrier, phoneNumber, owner);
-       display(cellPhone1);
-
-    }
-
-
-    public static String userStringInput(String message) {
-        System.out.print(message);
-        return scanner.nextLine();
+        return populateCellPhoneData(serialNumber, model, carrier, phoneNumber, owner);
     }
 
 
