@@ -32,7 +32,7 @@ public class CellPhoneApplication {
         userCellPhone.setPhoneNumber(phoneNumber);
         userCellPhone.setOwner(owner);
 
-        System.out.println("New cellphone created with this data: \nSerial Number: " + userCellPhone.getSerialNumber() + "\nModel: " + userCellPhone.getModel() + "\nCarrier: " + userCellPhone.getCarrier() + "\nPhone Number: " + userCellPhone.getOwner());
+        System.out.println("New cellphone created with this data: \nSerial Number: " + userCellPhone.getSerialNumber() + "\nModel: " + userCellPhone.getModel() + "\nCarrier: " + userCellPhone.getCarrier() + "\nPhone Number: " + userCellPhone.getPhoneNumber() + "\nOwner: " + userCellPhone.getOwner());
 
     }
 }
