@@ -13,9 +13,11 @@ public class CellPhoneApplication {
         String phoneNumber = userStringInput("What is the phone number? ");
         String owner = userStringInput("Who is the owner of the phone? ");
 
-        populateCellPhoneData(serialNumber, model, carrier, phoneNumber, owner);
+       CellPhone cellPhone1 = populateCellPhoneData(serialNumber, model, carrier, phoneNumber, owner);
+       display(cellPhone1);
 
     }
+
 
     public static String userStringInput(String message) {
         System.out.print(message);
@@ -23,7 +25,7 @@ public class CellPhoneApplication {
     }
 
 
-    public static void populateCellPhoneData(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
+    public static CellPhone populateCellPhoneData(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
         CellPhone userCellPhone = new CellPhone();
 
         userCellPhone.setSerialNumber(serialNumber);
@@ -32,7 +34,11 @@ public class CellPhoneApplication {
         userCellPhone.setPhoneNumber(phoneNumber);
         userCellPhone.setOwner(owner);
 
-        System.out.println("New cellphone created with this data: \nSerial Number: " + userCellPhone.getSerialNumber() + "\nModel: " + userCellPhone.getModel() + "\nCarrier: " + userCellPhone.getCarrier() + "\nPhone Number: " + userCellPhone.getPhoneNumber() + "\nOwner: " + userCellPhone.getOwner());
+        return userCellPhone;
 
+    }
+
+    public static void display(CellPhone userCellPhone) {
+        System.out.println("New cellphone created with this data: \nSerial Number: " + userCellPhone.getSerialNumber() + "\nModel: " + userCellPhone.getModel() + "\nCarrier: " + userCellPhone.getCarrier() + "\nPhone Number: " + userCellPhone.getPhoneNumber() + "\nOwner: " + userCellPhone.getOwner());
     }
 }
