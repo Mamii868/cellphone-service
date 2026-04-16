@@ -8,12 +8,13 @@ public class CellPhoneApplication {
         CellPhone cellPhone1 = promptCellphoneInput();
         CellPhone cellPhone2 = promptCellphoneInput();
 
+        System.out.println();
         display(cellPhone1);
-        System.out.println("\n");
+        System.out.println();
         display(cellPhone2);
-
+        System.out.println();
         cellPhone1.dial(cellPhone2.getPhoneNumber());
-        System.out.println("\n");
+        System.out.println();
         cellPhone2.dial(cellPhone1.getPhoneNumber());
     }
 
