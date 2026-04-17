@@ -6,8 +6,8 @@ public class CellPhoneApplication {
 
     public static void main(String[] args) {
 //        Create Phones
-        CellPhone cellPhone1 = promptCellphoneInput();
-        CellPhone cellPhone2 = promptCellphoneInput();
+        CellPhone cellPhone1 = createCellPhone();
+        CellPhone cellPhone2 = createCellPhone();
         CellPhone cellPhone3 = new CellPhone(12345, "iPhone12", "T-Mobile", "972-972-9972", "Marcus P.");
 
 //        Display phone data
@@ -33,7 +33,7 @@ public class CellPhoneApplication {
         return scanner.nextLine();
     }
 
-    public static CellPhone promptCellphoneInput() {
+    public static CellPhone createCellPhone() {
         System.out.print("What is the serial number? ");
         int serialNumber = scanner.nextInt();
         scanner.nextLine();
