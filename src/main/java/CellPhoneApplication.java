@@ -5,17 +5,26 @@ public class CellPhoneApplication {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+//        Create Phones
         CellPhone cellPhone1 = promptCellphoneInput();
         CellPhone cellPhone2 = promptCellphoneInput();
         CellPhone cellPhone3 = new CellPhone(12345, "iPhone12", "T-Mobile", "972-972-9972", "Marcus P.");
+
+//        Display phone data
         System.out.println();
         display(cellPhone1);
         System.out.println();
         display(cellPhone2);
         System.out.println();
+        display(cellPhone3);
+        System.out.println();
+
+//        Dial phones
         cellPhone1.dial(cellPhone2.getPhoneNumber());
         System.out.println();
         cellPhone2.dial(cellPhone1.getPhoneNumber());
+        System.out.println();
+
     }
 
     public static String userStringInput(String message) {
