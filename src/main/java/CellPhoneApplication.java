@@ -24,6 +24,7 @@ public class CellPhoneApplication {
         System.out.println();
         cellPhone2.dial(cellPhone1.getPhoneNumber());
         System.out.println();
+        cellPhone3.dial(cellPhone2);
 
     }
 
@@ -41,11 +42,6 @@ public class CellPhoneApplication {
         String phoneNumber = userStringInput("What is the phone number? ");
         String owner = userStringInput("Who is the owner of the phone? ");
 
-        return populateCellPhoneData(serialNumber, model, carrier, phoneNumber, owner);
-    }
-
-
-    public static CellPhone populateCellPhoneData(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
         CellPhone userCellPhone = new CellPhone();
 
         userCellPhone.setSerialNumber(serialNumber);
@@ -55,7 +51,6 @@ public class CellPhoneApplication {
         userCellPhone.setOwner(owner);
 
         return userCellPhone;
-
     }
 
     public static void display(CellPhone userCellPhone) {
