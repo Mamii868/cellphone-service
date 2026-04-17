@@ -7,7 +7,7 @@ public class CellPhoneApplication {
     public static void main(String[] args) {
         CellPhone cellPhone1 = promptCellphoneInput();
         CellPhone cellPhone2 = promptCellphoneInput();
-
+        CellPhone cellPhone3 = new CellPhone(12345, "iPhone12", "T-Mobile", "972-972-9972", "Marcus P.");
         System.out.println();
         display(cellPhone1);
         System.out.println();
